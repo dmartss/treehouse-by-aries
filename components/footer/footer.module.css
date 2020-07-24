@@ -1,0 +1,52 @@
+.root {
+  min-height: 100px;
+  z-index: 10000;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accents-1);
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.root a:hover {
+  color: var(--bg);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social > a {
+  display: inline-flex;
+  padding: 5px;
+}
+
+@media (max-width: 960px) {
+  .root {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
