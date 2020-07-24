@@ -25,10 +25,11 @@
   /* --selection: rgba(255, 255, 255, 0.99); */
 
   /* Static Colors */
-  --accents-1: #009a94;
-  --accents-2: #2daba5;
-  --accents-3: #365b6d;
-  --accents-4: #f2f1ec;
+  --accents-1: #365b6d;
+  --accents-2: #41c1ba;
+  --accents-3: #908940;
+  --accents-4: #e5da61;
+  --accents-5: #fdfdfb;
   --white: #ffffff;
 
   /* Typography */
