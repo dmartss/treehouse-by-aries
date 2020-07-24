@@ -186,15 +186,6 @@ button {
   display: flex;
 }
 
-kbd {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  padding: 2px 7px;
-  font-weight: 600;
-  background: var(--lighter-gray);
-  border-radius: 5px;
-}
-
 summary {
   cursor: pointer;
   outline: none;
