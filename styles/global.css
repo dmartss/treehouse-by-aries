@@ -68,14 +68,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background: var(--accents-4);
   font-family: var(--font-sans);
-  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
 
 html,
 body {
-  background-color: var(--accents-4);
+  background-color: var(--accents-5);
   color: #111;
 }
 
