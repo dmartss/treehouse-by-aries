@@ -12,7 +12,7 @@ function Navbar() {
   const { route } = useRouter()
 
   return (
-    <Container wide center>
+    <Container center>
       <nav className="f-reset">
         <div className="mobile-top">
           <Link href="/">
@@ -33,33 +33,31 @@ function Navbar() {
             </a>
           </Link>
 
-          <div className="urls">
-            <Link href="/">
-              <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
-                Rooms
-              </a>
-            </Link>
+          <Link href="/">
+            <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
+              Rooms
+            </a>
+          </Link>
 
-            <Link href="/">
-              <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
-                About
-              </a>
-            </Link>
+          <Link href="/">
+            <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
+              About
+            </a>
+          </Link>
 
-            <Link href="/">
-              <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
-                Photos
-              </a>
-            </Link>
-          </div>
+          <Link href="/">
+            <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
+              Photos
+            </a>
+          </Link>
 
           <div className="book">
             <Button href="/">Book</Button>
           </div>
-        </div>
-        <div className="right">
-          <p>{PHONE_NUMBER}</p>
-          <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
+          <div className="icon mute">
+            <p>{PHONE_NUMBER}</p>
+            <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
+          </div>
         </div>
       </nav>
 
@@ -67,36 +65,24 @@ function Navbar() {
         nav {
           position: relative;
           flex: 1;
+          height: var(--header-height);
           display: flex;
           align-items: center;
-          height: var(--header-height);
-          margin: 0 3rem;
         }
 
         .links {
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          justify-content: center;
           z-index: 1;
-        }
-
-        .urls {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          z-index: 1;
-        }
-
-        .urls a {
-          margin-right: 2rem;
         }
 
         .links a {
-          color: var(--accents-1);
           text-decoration: none;
           transition: color 0.2s ease;
+          margin-left: auto;
+          flex: 1;
         }
 
         .links a:hover {
@@ -105,22 +91,22 @@ function Navbar() {
 
         .links a.selected {
           color: var(--accents-2);
-          text-shadow: 0px 0px 1px #0070f3;
+          text-shadow: 0px 0px 1px var(--accents-1);
         }
 
-        .links > a.logo {
+        .links a:first-child {
           display: flex;
           margin: 0;
         }
 
-        a.icon,
-        a.icon > :global(div.container) {
+        .icon,
+        .icon > :global(div.container) {
           /* Remove additional space from SVG */
           display: inline-flex;
           justify-content: center;
         }
 
-        a.icon > :global(div.container) {
+        .icon > :global(div.container) {
           overflow: visible;
         }
 
@@ -142,15 +128,15 @@ function Navbar() {
           color: var(--accents-1);
         }
 
-        .right {
+        .icon {
           text-align: right;
           display: flex;
           flex-direction: column;
           justify-content: center;
+          line-height: 0.5;
+          color: var(--accents-1);
           margin-left: 1rem;
           margin-bottom: 1rem;
-          line-height: 0.25;
-          color: var(--accents-1);
         }
 
         /* Mobile */
