@@ -36,6 +36,9 @@ export default function Footer() {
                 </a>
               </span>
 
+              <p className={styles.mobile}>
+                {ADDRESS_TOP} {ADDRESS_BOTTOM}
+              </p>
               <p>
                 Copyright © {`${new Date().getFullYear()}`} {LLC_NAME}, All rights reserved.
               </p>

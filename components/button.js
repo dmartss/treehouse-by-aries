@@ -14,7 +14,7 @@ const cachedStyles = css`
     padding: 0.25rem 0.5rem;
     margin: -0.25rem -0.5rem;
     border-radius: 7px;
-    color: #0070f3;
+    color: var(--accents-1);
     background-color: transparent;
     border: none;
     font-size: inherit;
@@ -23,8 +23,8 @@ const cachedStyles = css`
     outline: none;
   }
   .btn:hover {
-    color: #0070f3;
-    background: rgba(0, 118, 255, 0.1);
+    color: var(--accents-1);
+    background: rgba(0, 154, 148, 0.1);
   }
   .btn.invert {
     margin: 0;
@@ -32,16 +32,16 @@ const cachedStyles = css`
     height: 2.81rem;
     line-height: 2.8rem;
     border-radius: 7px;
-    background-color: #0070f3;
-    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    background-color: var(--accents-1);
+    box-shadow: 0 4px 14px 0 rgba(0, 154, 148, 0.39);
     color: white;
   }
   .btn.invert:hover {
     background: var(--accents-1);
-    box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+    box-shadow: 0 6px 20px rgba(0, 154, 148, 0.23);
   }
   .btn.invert:active {
-    background: #006ae6;
+    background: var(--accents-2);
   }
   .btn.invert.outline {
     background: #fff;

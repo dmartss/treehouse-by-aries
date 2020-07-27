@@ -14,8 +14,12 @@
   flex: 1;
 }
 
-.content > :global(div.tl),
-.content > :global(div.tr) {
+.root a:hover {
+  color: var(--accents-3);
+}
+
+.content > :global(.tl),
+.content > :global(.tr) {
   flex: 0 1 25%;
 }
 
@@ -36,22 +40,19 @@
   display: inline-flex;
   padding: 5px;
 }
+.mobile {
+  display: none;
+}
 
 @media (max-width: 960px) {
-  .root {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  .content > :global(.tl),
+  .content > :global(.tr) {
+    display: none;
   }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+  .mobile {
+    display: block;
   }
-  .content > * {
-    text-align: center;
+  .social > a {
+    padding-top: var(--gap);
   }
 }
