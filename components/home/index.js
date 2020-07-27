@@ -6,7 +6,7 @@ export default function Home() {
     <Container role="main" padding wide center overflow>
       <Container>
         <img className="no-drag" src="/room.jpg" />
-        <h3>Welcome to {NAME_SHORT}</h3>
+        <h3 className="mute fw3">Welcome to {NAME_SHORT}</h3>
       </Container>
     </Container>
   )

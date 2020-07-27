@@ -18,7 +18,7 @@ export default function Footer() {
       <Container>
         <footer className={styles.root}>
           <nav className={styles.content}>
-            <div className={styles.left}>
+            <div className="tl">
               <p>{PHONE_NUMBER}</p>
               <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className={styles.right}>
+            <div className="tr">
               <p>{ADDRESS_TOP}</p>
               <p>{ADDRESS_BOTTOM}</p>
             </div>
