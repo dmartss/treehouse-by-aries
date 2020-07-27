@@ -17,12 +17,6 @@
   /* Light Mode Colors */
   --bg: #fafbfc;
   --fg: #131415;
-  /* --gray: #666;
-  --light-gray: #444;
-  --lighter-gray: #222;
-  --lightest-gray: #1a1a1a;
-  --gray-alpha: rgba(255, 255, 255, 0.3); */
-  /* --selection: rgba(255, 255, 255, 0.99); */
 
   /* Static Colors */
   --accents-1: #365b6d;
@@ -65,7 +59,6 @@ body {
   min-height: 100%;
   margin: 0;
   line-height: 1.65;
-  font-family: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
   font-size: 16px;
   font-weight: 400;
   min-width: 320px;
@@ -76,9 +69,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   background: var(--accents-4);
-  color: var(--fg);
   font-family: var(--font-sans);
-  display: flex;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
 
@@ -99,7 +90,14 @@ body {
 
 svg {
   text-rendering: optimizeLegibility;
+  shape-rendering: crispEdges;
 }
+
+svg path,
+svg circle {
+  shape-rendering: geometricprecision;
+}
+
 h1,
 h2,
 h3 {
@@ -117,9 +115,6 @@ a:hover {
   color: var(--accents-4);
 }
 
-.flex {
-  display: flex;
-}
 iframe {
   width: 100%;
   height: 100%;
@@ -203,15 +198,6 @@ a {
   border: 0;
   overflow: hidden;
   position: absolute;
-}
-
-svg {
-  shape-rendering: crispEdges;
-}
-
-svg path,
-svg circle {
-  shape-rendering: geometricprecision;
 }
 
 .row {

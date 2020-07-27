@@ -26,9 +26,9 @@ export default function Container({
         ${wide && !small ? '' : 'max-width: 1024px;'}
         ${small ? 'max-width: 682px;' : ''}
         ${center ? 'text-align: center;' : ''}
-        ${dark ? 'background: #111;' : ''}
+        ${dark ? 'background-color: var(--accents-1);' : ''}
         ${dark ? 'color: #f1f1f1;' : ''}
-        ${gray ? 'background-color: #fafafa;' : ''}
+        ${gray ? 'background-color: var(--accents-2);' : ''}
         ${gray ? 'border-top: 1px solid #eaeaea;' : ''}
         ${gray ? 'border-bottom: 1px solid #eaeaea;' : ''}
         ${wide && !overflow ? 'overflow: hidden;' : ''}
