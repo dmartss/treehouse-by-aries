@@ -2,7 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
-import { EMAIL_ADDRESS, PHONE_NUMBER } from 'lib/constants'
+import { EMAIL_ADDRESS, PHONE_NUMBER, NAME_SHORT, NAME_LONG } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -12,9 +12,11 @@ function Navbar() {
   const { route } = useRouter()
 
   return (
-    <Container center>
+    <Container>
       <nav className="f-reset">
         <div className="mobile-top">
+          <p style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</p>
+          <p style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</p>
           <Link href="/">
             <a className="mobile-logo" title="Go to the homepage">
               <Logo />
@@ -27,30 +29,31 @@ function Navbar() {
         </div>
 
         <div className="links">
+          <div className="hotel">
+            <p style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</p>
+            <p style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</p>
+          </div>
+
           <Link href="/">
             <a className="logo">
               <Logo />
             </a>
           </Link>
-
           <Link href="/">
             <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
               Rooms
             </a>
           </Link>
-
           <Link href="/">
             <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
               About
             </a>
           </Link>
-
           <Link href="/">
             <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
               Photos
             </a>
           </Link>
-
           <div className="book">
             <Button href="/">Book</Button>
           </div>
@@ -74,15 +77,22 @@ function Navbar() {
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           z-index: 1;
         }
 
         .links a {
           text-decoration: none;
           transition: color 0.2s ease;
-          margin-left: auto;
+          margin-left: 1rem;
           flex: 1;
+        }
+
+        .links .hotel {
+          line-height: 0.5;
+          margin-right: -2rem;
+          overflow: hidden;
+          white-space: nowrap;
         }
 
         .links a:hover {
@@ -96,9 +106,12 @@ function Navbar() {
 
         .links a:first-child {
           display: flex;
+          overflow: hidden;
+          white-space: nowrap;
           margin: 0;
         }
 
+        .logo,
         .icon,
         .icon > :global(div.container) {
           /* Remove additional space from SVG */
@@ -141,7 +154,13 @@ function Navbar() {
 
         /* Mobile */
 
-        @media (max-width: 640px) {
+        @media (max-width: 960px) {
+          .links .logo {
+            padding-left: 1rem;
+          }
+        }
+
+        @media (max-width: 700px) {
           .mobile-logo {
             display: block;
           }
@@ -155,6 +174,7 @@ function Navbar() {
           }
 
           nav .links .logo,
+          nav .links .hotel,
           nav .links .book {
             display: none;
           }
