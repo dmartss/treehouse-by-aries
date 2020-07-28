@@ -10,13 +10,9 @@
   --gap-triple: 3rem;
   --small-gap: 4rem;
   --big-gap: 10rem;
-  --radius: 8px;
+  --radius: 7px;
   --inline-radius: 5px;
   --header-height: 5rem;
-
-  /* Light Mode Colors */
-  --bg: #fafbfc;
-  --fg: #131415;
 
   /* Static Colors */
   --accents-1: #365b6d;
@@ -77,10 +73,6 @@ body {
   color: #111;
 }
 
-.mute {
-  color: var(--accents-1);
-}
-
 ::selection {
   background-color: var(--accents-1);
   color: var(--white);
@@ -118,12 +110,22 @@ iframe {
   height: 100%;
   border: none;
 }
+
+img {
+  max-width: 100%;
+  width: auto;
+  margin: auto;
+  display: block;
+}
+
 .f-reset {
   font-size: 1rem;
 }
-
-.subtitle {
-  color: var(--accents-2);
+.mute {
+  color: var(--accents-1);
+}
+.title {
+  color: var(--accents-4);
 }
 .tc {
   text-align: center;
@@ -202,22 +204,6 @@ a {
   border: 0;
   overflow: hidden;
   position: absolute;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  margin: 0 -1.5rem;
-}
-.display-none {
-  display: none;
-}
-
-img {
-  max-width: 100%;
-  width: auto;
-  margin: auto;
-  display: block;
 }
 
 .f0 {

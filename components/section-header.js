@@ -20,9 +20,9 @@ export default withPure(({ id, title, description, className, margin = '0 0 5rem
         }
       `}
     </style>
-    <h2 id={id} className="mute fw3">
+    <h2 id={id} className="title fw3">
       {title}
     </h2>
-    {description && <p className="f-reset subtitle fw4">{description}</p>}
+    {description && <p className="f-reset mute fw4">{description}</p>}
   </div>
 ))

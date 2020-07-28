@@ -11,9 +11,9 @@ const cachedStyles = css`
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    margin: -0.25rem -0.5rem;
-    border-radius: 7px;
+    padding: var(--gap-quarter) var(--gap-half);
+    margin: calc(-1 * var(--gap-quarter)) calc(-1 * var(--gap-half));
+    border-radius: var(--radius);
     color: var(--accents-1);
     background-color: transparent;
     border: none;
@@ -31,7 +31,7 @@ const cachedStyles = css`
     padding: 0 3.5rem;
     height: 2.81rem;
     line-height: 2.8rem;
-    border-radius: 7px;
+    border-radius: var(--radius);
     background-color: var(--accents-1);
     box-shadow: 0 4px 14px 0 rgba(0, 154, 148, 0.39);
     color: white;
@@ -44,7 +44,7 @@ const cachedStyles = css`
     background: var(--accents-2);
   }
   .btn.invert.outline {
-    background: #fff;
+    background: var(--white);
     color: #696969;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
   }
