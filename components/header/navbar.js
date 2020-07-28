@@ -44,7 +44,7 @@ function Navbar() {
               Rooms
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/about">
             <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
               About
             </a>
@@ -100,8 +100,8 @@ function Navbar() {
         }
 
         .links a.selected {
-          color: var(--accents-2);
-          text-shadow: 0px 0px 1px var(--accents-1);
+          color: var(--accents-3);
+          text-shadow: 0px 0px 1px var(--accents-3);
         }
 
         .links a:first-child {
