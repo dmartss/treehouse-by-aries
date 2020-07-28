@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import classNames from 'classnames'
+import cn from 'classnames'
 import css from 'styled-jsx/css'
 import withPure from 'components/hoc/pure'
 
@@ -87,7 +87,7 @@ export default withPure(function Button({
   loading,
   ...props
 }) {
-  const cachedClassNames = classNames(className, 'btn', 'fw4 no-drag', {
+  const cachedClassNames = cn(className, 'btn', 'fw4 no-drag', {
     outline,
     invert,
     small,
