@@ -12,8 +12,8 @@ export default function Home() {
           shadow
           className="no-drag no-tap-highlight"
           oversize={false}
-          alt="room"
-          src="/room.jpg"
+          alt="Room 1"
+          src="/images/room-1.jpg"
           width={3000 / 2}
           height={2000 / 2}
         />
@@ -41,8 +41,8 @@ export default function Home() {
           <Image
             shadow
             className="no-drag no-tap-highlight"
-            alt="room"
-            src="/room.jpg"
+            alt="Room 2"
+            src="/images/room-2.jpg"
             width={3000 / 6}
             height={2000 / 6}
           />
@@ -60,8 +60,8 @@ export default function Home() {
           <Image
             shadow
             className="no-drag no-tap-highlight"
-            alt="room"
-            src="/room.jpg"
+            alt="Room 3"
+            src="/images/room-3.jpg"
             width={3000 / 6}
             height={2000 / 6}
           />
