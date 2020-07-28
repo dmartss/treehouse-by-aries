@@ -8,10 +8,10 @@ export default withPure(({ description, margin, reverse, children }) => (
           position: relative;
           display: flex;
           align-items: center;
-          text-align: center;
           justify-content: space-between;
           margin: ${margin || 0};
-          ${reverse ? 'flex-direction: row-reverse' : 'flex-direction: row'};
+          text-align: ${reverse ? 'left' : 'right'};
+          flex-direction: ${reverse ? 'row-reverse' : 'row'};
         }
         p {
           padding: var(--gap-double);
