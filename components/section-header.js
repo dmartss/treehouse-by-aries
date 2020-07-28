@@ -1,6 +1,6 @@
 import withPure from './hoc/pure'
 
-export default withPure(({ id, title, description, className, margin = '0 0 5rem 0' }) => (
+export default withPure(({ id, title, description, className, margin = '0 0 2rem 0' }) => (
   <div className={className}>
     <style jsx>
       {`

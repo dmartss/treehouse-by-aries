@@ -14,11 +14,15 @@ export default withPure(({ description, margin, reverse, children }) => (
           flex-direction: ${reverse ? 'row-reverse' : 'row'};
         }
         p {
-          padding: var(--gap-double);
+          margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
         }
         @media screen and (max-width: 960px) {
           div {
             flex-direction: column;
+            text-align: center;
+          }
+          p {
+            padding: 0 var(--gap);
           }
         }
       `}

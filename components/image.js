@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
+import cn from 'classnames'
 import IObserver from './intersection-observer'
 
 class Image extends Component {
@@ -41,7 +41,7 @@ class Image extends Component {
     return (
       <IObserver once onIntersect={this.handleIntersect} rootMargin="20%" disabled={!lazy}>
         <figure
-          className={classNames({
+          className={cn({
             oversize: width > 650 && oversize,
             float: float && width < 520
           })}
@@ -123,12 +123,8 @@ class Image extends Component {
   }
 }
 
-export const Video = props => {
-  return <Image {...props} video />
-}
+export const Video = props => <Image {...props} video />
 
-const ImageComponent = props => {
-  return <Image {...props} />
-}
+const ImageComponent = props => <Image {...props} />
 
 export default ImageComponent
