@@ -1,6 +1,6 @@
 import withPure from './hoc/pure'
 
-export default withPure(({ description, margin = '0 0 5rem 0', reverse, children }) => (
+export default withPure(({ description, margin, reverse, children }) => (
   <div>
     <style jsx>
       {`
@@ -8,22 +8,22 @@ export default withPure(({ description, margin = '0 0 5rem 0', reverse, children
           position: relative;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          ${reverse ? 'flex-direction: row-reverse' : 'flex-direction: row'};
           text-align: center;
-          margin: ${margin};
+          justify-content: space-between;
+          margin: ${margin || 0};
+          ${reverse ? 'flex-direction: row-reverse' : 'flex-direction: row'};
         }
         p {
           padding: var(--gap-double);
         }
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 960px) {
           div {
-            padding: 0 var(--gap);
+            flex-direction: column;
           }
         }
       `}
     </style>
     {children}
-    {description && <p className="f-reset mute fw4">{description}</p>}
+    <p className="f-reset mute fw4">{description}</p>
   </div>
 ))
