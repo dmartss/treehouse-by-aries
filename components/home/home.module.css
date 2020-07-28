@@ -1,9 +1,0 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  color: var(--accents-1);
-}
