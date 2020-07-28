@@ -15,7 +15,7 @@
 }
 
 .root a:hover {
-  color: var(--accents-3);
+  color: var(--accents-4);
 }
 
 .content > :global(.tl),
