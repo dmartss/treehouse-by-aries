@@ -46,7 +46,9 @@ export default function Rooms() {
                 justify-content: space-around;
                 align-items: center;
               }
-
+              .info > h5 {
+                flex: 1;
+              }
               .images {
                 display: grid;
                 grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : 'auto'};
