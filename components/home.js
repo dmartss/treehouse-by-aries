@@ -13,7 +13,7 @@ export default function Home() {
           className="no-drag no-tap-highlight"
           oversize={false}
           alt="Room 1"
-          src="/images/room-1.jpg"
+          src="/images/rooms/ql/1.jpg"
           width={3000 / 2}
           height={2000 / 2}
         />
@@ -42,7 +42,7 @@ export default function Home() {
             shadow
             className="no-drag no-tap-highlight"
             alt="Room 2"
-            src="/images/room-2.jpg"
+            src="/images/front/1.jpg"
             width={3000 / 6}
             height={2000 / 6}
           />
@@ -61,7 +61,7 @@ export default function Home() {
             shadow
             className="no-drag no-tap-highlight"
             alt="Room 3"
-            src="/images/room-3.jpg"
+            src="/images/back/1.jpg"
             width={3000 / 6}
             height={2000 / 6}
           />

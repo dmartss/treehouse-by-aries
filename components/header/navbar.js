@@ -39,7 +39,7 @@ function Navbar() {
               <Logo />
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/rooms">
             <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
               Rooms
             </a>

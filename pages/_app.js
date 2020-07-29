@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 let timeout
 
-export default ({ Component, pageProps }) => {
+export default function MyApp({ Component, pageProps }) {
   const start = url => {
     timeout = setTimeout(NProgress.start, 500)
     gTagPageView(url)
