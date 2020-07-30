@@ -5,11 +5,11 @@ import { NAME_SHORT } from 'lib/constants'
 
 export default function Page({ title = NAME_SHORT, sticky, description, image, children }) {
   return (
-    <div>
+    <>
       <Head title={title} description={description} image={image} />
       <Header sticky={sticky} />
       {children}
       <Footer />
-    </div>
+    </>
   )
 }
