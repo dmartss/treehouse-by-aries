@@ -84,7 +84,6 @@ function Navbar() {
         .links a {
           text-decoration: none;
           transition: color 0.2s ease;
-          margin-left: 1rem;
           flex: 1;
         }
 
