@@ -6,14 +6,13 @@ export default function Section({ description, margin, reverse, children }) {
           div {
             position: relative;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin: ${margin || 0};
             text-align: ${reverse ? 'left' : 'right'};
             flex-direction: ${reverse ? 'row-reverse' : 'row'};
           }
           p {
             margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
+            align-self: center;
           }
           @media screen and (max-width: 960px) {
             div {
@@ -22,6 +21,7 @@ export default function Section({ description, margin, reverse, children }) {
             }
             p {
               padding: 0 var(--gap);
+              margin: 0;
             }
           }
         `}

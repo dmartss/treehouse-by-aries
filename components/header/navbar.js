@@ -148,19 +148,18 @@ function Navbar() {
           justify-content: center;
           line-height: 0.5;
           color: var(--accents-1);
-          margin-left: 1rem;
-          margin-bottom: 1rem;
+          margin: 0 0 var(--gap) var(--gap);
         }
 
         /* Mobile */
 
         @media (max-width: 960px) {
           .links .logo {
-            padding-left: 1rem;
+            padding-left: var(--gap);
           }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 640px) {
           .mobile-logo {
             display: block;
           }
@@ -179,7 +178,8 @@ function Navbar() {
             display: none;
           }
 
-          nav .links a {
+          nav a,
+          nav p {
             font-size: 14px;
           }
 
