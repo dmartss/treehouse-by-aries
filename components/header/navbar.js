@@ -49,7 +49,7 @@ function Navbar() {
               About
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/photos">
             <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
               Photos
             </a>
