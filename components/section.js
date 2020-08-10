@@ -1,4 +1,4 @@
-export default function Section({ description, margin, reverse, children }) {
+export default function Section({ description, reverse, children }) {
   return (
     <div>
       <style jsx>
