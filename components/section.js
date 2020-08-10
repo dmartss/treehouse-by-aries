@@ -13,6 +13,7 @@ export default function Section({ description, reverse, children }) {
           p {
             margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
             align-self: center;
+            line-height: 2;
           }
           @media screen and (max-width: 960px) {
             div {

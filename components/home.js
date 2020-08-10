@@ -1,7 +1,7 @@
 import Container from 'components/container'
 import SectionHeader from 'components/section-header'
 import Section from 'components/section'
-import { NAME_SHORT } from 'lib/constants'
+import { NAME_SHORT, TEXT } from 'lib/constants'
 import Image from './image'
 
 export default function Home() {
@@ -21,23 +21,9 @@ export default function Home() {
           id="welcome"
           title={`Welcome to ${NAME_SHORT}`}
           className="no-drag no-tap-highlight"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu."
+          description={TEXT[0]}
         />
-        <Section
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu."
-        >
+        <Section description={TEXT[1]}>
           <Image
             shadow
             className="no-drag no-tap-highlight"
@@ -47,16 +33,7 @@ export default function Home() {
             height={2000 / 6}
           />
         </Section>
-        <Section
-          reverse
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu."
-        >
+        <Section reverse description={TEXT[2]}>
           <Image
             shadow
             className="no-drag no-tap-highlight"

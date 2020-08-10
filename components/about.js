@@ -1,45 +1,24 @@
 import Container from 'components/container'
 import SectionHeader from 'components/section-header'
-import { NAME_SHORT } from 'lib/constants'
+import { NAME_SHORT, TEXT } from 'lib/constants'
+import Image from './image'
 
 export default function Home() {
   return (
     <Container role="main" wide dotBackground aria-labelledby="about">
       <Container center padding>
-        <SectionHeader
-          id="about"
-          title={`About ${NAME_SHORT}`}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu."
+        <SectionHeader id="about" title={`About ${NAME_SHORT}`} description={TEXT[0]} />
+        <Image
+          shadow
+          className="no-drag no-tap-highlight"
+          oversize={false}
+          alt="Room 1"
+          src="/images/back/1.jpg"
+          width={3000 / 4}
+          height={2000 / 4}
         />
-        <SectionHeader
-          id="more"
-          title="More"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in
-          dictum. Orci nulla pellentesque dignissim enim sit. Natoque penatibus et magnis dis
-          parturient montes. Est velit egestas dui id ornare arcu odio ut. Fusce ut placerat orci
-          nulla. Nunc aliquet bibendum enim facilisis gravida neque convallis. Adipiscing diam
-          donec adipiscing tristique risus. In fermentum posuere urna nec tincidunt. Eget dolor
-          morbi non arcu."
-        />
+        <SectionHeader id="service" title="Service" description={TEXT[1]} />
+        <SectionHeader id="Where it's at" title="Where it's at" description={TEXT[2]} />
       </Container>
     </Container>
   )
