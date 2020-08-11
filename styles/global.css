@@ -21,6 +21,7 @@
   --accents-4: #e5da61;
   --accents-5: #fdfdfb;
   --white: #ffffff;
+  --black: #000000;
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
@@ -70,7 +71,14 @@ body {
 html,
 body {
   background-color: var(--accents-5);
-  color: #111;
+  color: var(--black);
+}
+
+.subtitle {
+  color: var(--accents-1);
+}
+.mute {
+  color: var(--accents-4);
 }
 
 ::selection {
@@ -120,12 +128,6 @@ img {
 
 .f-reset {
   font-size: 1rem;
-}
-.mute {
-  color: var(--accents-1);
-}
-.title {
-  color: var(--accents-4);
 }
 .tc {
   text-align: center;

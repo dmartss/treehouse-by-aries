@@ -14,14 +14,14 @@ export default function Home() {
           description={`Attitude-Free Pricing & Packages`}
         />
         <div className="paragraph">
-          <p className="mute">
+          <p className="subtitle">
             Transformed from an American motel classic to an uber-chic, boutique urban oasis, The
             Vagabond Hotel Miami is bringing back stylish highly-personalized service to the
             Biscayne Boulevard corridor! Throughout the year, you'll find unique Miami experiences
             like Art Basel, Miami Boat and Auto Show, Miami Book Fair International, South Beach
             Food and Wine Festival, and more. Go ahead and call dibs on one while you still can…
           </p>
-          <p className="mute">
+          <p className="subtitle">
             WE MAKE IT SUPER QUICK, EASY AND CONVENIENT. During these challenging times, we know
             flexibility is key so don't worry we've got you covered! Reservations for future
             arrivals through November 30, 2020 can be changed or cancelled without charge up to 24

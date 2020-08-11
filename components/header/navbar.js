@@ -42,29 +42,32 @@ function Navbar() {
             </a>
           </Link>
           <Link href="/rooms">
-            <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
+            <a className={cn('subtitle', { selected: route.startsWith('/rooms') })} title="Rooms">
               Rooms
             </a>
           </Link>
           <Link href="/about">
-            <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
+            <a className={cn('subtitle', { selected: route.startsWith('/about') })} title="About">
               About
             </a>
           </Link>
           <Link href="/photos">
-            <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
+            <a className={cn('subtitle', { selected: route.startsWith('/photos') })} title="Photos">
               Photos
             </a>
           </Link>
           <Link href="/specials">
-            <a className={cn('mute', { selected: route.startsWith('/specials') })} title="Specials">
+            <a
+              className={cn('subtitle', { selected: route.startsWith('/specials') })}
+              title="Specials"
+            >
               Specials
             </a>
           </Link>
           <div className="book">
             <Button href="/">Book</Button>
           </div>
-          <div className="icon mute">
+          <div className="icon subtitle">
             <p>{PHONE_NUMBER}</p>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>

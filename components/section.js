@@ -28,7 +28,7 @@ export default function Section({ description, reverse, children }) {
         `}
       </style>
       {children}
-      <p className="f-reset mute fw4">{description}</p>
+      <p className="f-reset subtitle fw4">{description}</p>
     </div>
   )
 }

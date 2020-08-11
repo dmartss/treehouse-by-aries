@@ -13,13 +13,13 @@ export default function Rooms() {
           ({ name, type, occupancy, quantity, description, images }) =>
             description && (
               <div className="room" key={name}>
-                <h3 className="mute fw3">{name}</h3>
-                <div className="info title">
+                <h3 className="subtitle fw3">{name}</h3>
+                <div className="info mute">
                   <h5 className="fw4">Type: {type}</h5>
                   <h5 className="fw4">Occupancy: {occupancy}</h5>
                   <h5 className="fw4"># of Rooms: {quantity}</h5>
                 </div>
-                <h5 className="mute fw4">{description}</h5>
+                <h5 className="subtitle fw4">{description}</h5>
                 <div className="images">
                   {images.map(({ src }) => (
                     <Image
@@ -40,7 +40,7 @@ export default function Rooms() {
                     padding-bottom: var(--gap-double);
                   }
                   .room:not(:first-of-type) {
-                    border-top: 1px solid #efefef;
+                    border-top: 1px solid var(--accents-4);
                     padding-top: var(--gap-double);
                   }
                   .info {
