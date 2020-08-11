@@ -1,4 +1,5 @@
 import Button from 'components/button'
+import { REZTRIP_URL } from 'lib/constants'
 
 export default function SpecialsSection({ description, reverse, children, special }) {
   return (
@@ -8,7 +9,6 @@ export default function SpecialsSection({ description, reverse, children, specia
           .main {
             position: relative;
             display: flex;
-            align-items: center;
             flex-direction: ${reverse ? 'row-reverse' : 'row'};
             margin-top: var(--gap-double);
           }
@@ -16,8 +16,7 @@ export default function SpecialsSection({ description, reverse, children, specia
             margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-around;
           }
           .content :global(a) {
             background-color: var(--accents-4);
@@ -26,11 +25,6 @@ export default function SpecialsSection({ description, reverse, children, specia
             padding: var(--gap-quarter) var(--gap);
             margin: 0;
             align-self: center;
-          }
-          .content :global(a:focus),
-          .content :global(a:hover) {
-            background-color: transparent;
-            color: var(--accents-1);
           }
           @media screen and (max-width: 960px) {
             .main {
@@ -48,7 +42,9 @@ export default function SpecialsSection({ description, reverse, children, specia
       <div className="content">
         <h2 className="mute fw4">{special}</h2>
         <p className="f-reset subtitle fw4">{description}</p>
-        <Button href="/specials">BOOK</Button>
+        <Button invert href={REZTRIP_URL}>
+          Book
+        </Button>
       </div>
     </div>
   )

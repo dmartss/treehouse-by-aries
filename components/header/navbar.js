@@ -2,7 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
-import { EMAIL_ADDRESS, PHONE_NUMBER, NAME_SHORT, NAME_LONG } from 'lib/constants'
+import { EMAIL_ADDRESS, PHONE_NUMBER, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -15,7 +15,7 @@ function Navbar() {
     <Container>
       <nav className="f-reset">
         <div className="mobile-top">
-          <p style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</p>
+          <p className="subtitle">{NAME_SHORT.toUpperCase()}</p>
           <p style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</p>
           <Link href="/">
             <a className="mobile-logo" title="Go to the homepage">
@@ -24,14 +24,14 @@ function Navbar() {
           </Link>
 
           <div className="book">
-            <Button href="/">Book</Button>
+            <Button href={REZTRIP_URL}>Book</Button>
           </div>
         </div>
 
         <div className="links">
           <Link href="/">
             <div className="hotel">
-              <a style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</a>
+              <a className="subtitle">{NAME_SHORT.toUpperCase()}</a>
               <a style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</a>
             </div>
           </Link>
@@ -65,7 +65,7 @@ function Navbar() {
             </a>
           </Link>
           <div className="book">
-            <Button href="/">Book</Button>
+            <Button href={REZTRIP_URL}>Book</Button>
           </div>
           <div className="icon subtitle">
             <p>{PHONE_NUMBER}</p>
@@ -188,7 +188,7 @@ function Navbar() {
 
           nav a,
           nav p {
-            font-size: 14px;
+            font-size: 12px;
           }
 
           nav .links a:nth-child(2) {

@@ -32,19 +32,19 @@ const cachedStyles = css`
     height: 2.81rem;
     line-height: 2.8rem;
     border-radius: var(--radius);
-    background-color: var(--accents-1);
-    box-shadow: 0 4px 14px 0 rgba(0, 154, 148, 0.39);
-    color: white;
+    background-color: var(--accents-4);
+    box-shadow: 0 4px 14px 0 rgba(229, 218, 97, 0.39);
+    color: var(--white);
   }
   .btn.invert:hover {
     background: var(--accents-1);
-    box-shadow: 0 6px 20px rgba(0, 154, 148, 0.23);
+    box-shadow: 0 6px 20px rgba(229, 218, 97, 0.23);
   }
   .btn.invert:active {
-    background: var(--accents-2);
+    background: var(--accents-3);
   }
   .btn.invert.outline {
-    background: var(--white);
+    background: var(--accents-4);
     color: #696969;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
   }
