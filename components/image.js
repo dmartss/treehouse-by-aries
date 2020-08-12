@@ -3,29 +3,25 @@ import cn from 'classnames'
 import IObserver from './intersection-observer'
 
 class Image extends Component {
-  static defaultProps = {
-    lazy: true
-  }
+  static defaultProps = { lazy: true }
 
-  state = {
-    src: !this.props.lazy ? this.props.videoSrc || this.props.src : undefined
-  }
+  state = { src: !this.props.lazy ? this.props.src : undefined }
 
   handleIntersect = entry => {
     if (entry.isIntersecting) {
-      this.setState({ src: this.props.videoSrc || this.props.src })
+      this.setState({ src: this.props.src })
     }
   }
 
   render() {
     const {
-      caption,
+      // caption,
       width,
       height,
       margin = 40,
       video = false,
-      videoSrc,
-      captionSpacing = null,
+      // videoSrc,
+      // captionSpacing = null,
       renderImage,
       oversize = true,
       float,
@@ -49,9 +45,7 @@ class Image extends Component {
           <div className="container">
             <div style={{ paddingBottom: aspectRatio, ...style }}>
               {this.state.src ? (
-                videoSrc || video ? (
-                  <video src={this.state.src} muted autoPlay loop playsInline />
-                ) : renderImage ? (
+                renderImage ? (
                   renderImage(rest)
                 ) : (
                   <img className={className} src={this.state.src || null} alt={rest.alt} />
@@ -59,11 +53,11 @@ class Image extends Component {
               ) : null}
             </div>
 
-            {caption && (
+            {/* {caption && (
               <figcaption style={captionSpacing ? { marginTop: captionSpacing } : {}}>
                 {caption}
               </figcaption>
-            )}
+            )} */}
           </div>
 
           <style jsx>
@@ -87,21 +81,21 @@ class Image extends Component {
                 transform: translate3d(0, 0, 0); /* Work around for Chrome bug */
                 position: relative;
               }
-              figure :global(img),
-              figure :global(video) {
+              figure :global(img) {
                 height: 100%;
                 left: 0;
                 position: absolute;
                 top: 0;
                 width: 100%;
+                border-radius: 7px;
                 ${shadow ? 'box-shadow: 0 8px 30px rgba(0,0,0,0.12)' : ''}
               }
-              figcaption {
+              {/* figcaption {
                 color: #999;
                 font-size: 12px;
                 margin: 0;
                 text-align: center;
-              }
+              } */}
 
               @media (min-width: 1200px) {
                 figure.oversize {
