@@ -3,7 +3,7 @@ import Specials from 'components/specials'
 
 export default function SpecialsPage() {
   return (
-    <Page>
+    <Page title="Specials">
       <Specials />
     </Page>
   )

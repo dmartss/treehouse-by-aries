@@ -40,7 +40,7 @@ export default function Rooms() {
                     padding-bottom: var(--gap-double);
                   }
                   .room:not(:first-of-type) {
-                    border-top: 1px solid var(--accents-4);
+                    border-top: 1px solid var(--accents-3);
                     padding-top: var(--gap-double);
                   }
                   .info {

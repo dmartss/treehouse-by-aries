@@ -63,8 +63,8 @@ export default function Home() {
       <style jsx>
         {`
           .paragraph {
-            border-top: 1px solid var(--accents-4);
-            border-bottom: 1px solid var(--accents-4);
+            border-top: 1px solid var(--accents-3);
+            border-bottom: 1px solid var(--accents-3);
             padding: var(--gap-double);
           }
         `}

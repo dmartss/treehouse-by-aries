@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--accents-1);
 }
 
 .content {
@@ -15,7 +14,7 @@
 }
 
 .root a:hover {
-  color: var(--accents-4);
+  color: var(--accents-3);
 }
 
 .content > :global(.tl),

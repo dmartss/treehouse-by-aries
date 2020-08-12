@@ -17,8 +17,8 @@
   /* Static Colors */
   --accents-1: #365b6d;
   --accents-2: #41c1ba;
-  --accents-3: #908940;
-  --accents-4: #e5da61;
+  --accents-3: #e5da61;
+  --accents-4: #908940;
   --accents-5: #fdfdfb;
   --white: #ffffff;
   --black: #000000;
@@ -78,7 +78,7 @@ body {
   color: var(--accents-1);
 }
 .mute {
-  color: var(--accents-4);
+  color: var(--accents-3);
 }
 
 ::selection {

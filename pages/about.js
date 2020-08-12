@@ -3,7 +3,7 @@ import About from 'components/about'
 
 export default function AboutPage() {
   return (
-    <Page>
+    <Page title="About">
       <About />
     </Page>
   )

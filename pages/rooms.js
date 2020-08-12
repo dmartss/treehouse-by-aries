@@ -3,7 +3,7 @@ import Rooms from 'components/rooms'
 
 export default function RoomsPage() {
   return (
-    <Page>
+    <Page title="Rooms">
       <Rooms />
     </Page>
   )

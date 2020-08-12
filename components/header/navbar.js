@@ -2,7 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
-import { EMAIL_ADDRESS, PHONE_NUMBER, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
+import { EMAIL, PHONE_NUMBER, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -19,7 +19,7 @@ function Navbar() {
             <a className="subtitle">{NAME_SHORT.toUpperCase()}</a>
           </Link>
           <Link href="/">
-            <a style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</a>
+            <a style={{ color: 'var(--accents-4)' }}>{NAME_LONG.toLowerCase()}</a>
           </Link>
           <Link href="/">
             <a className="mobile-logo" title="Go to the homepage">
@@ -38,7 +38,7 @@ function Navbar() {
               <a className="subtitle">{NAME_SHORT.toUpperCase()}</a>
             </Link>
             <Link href="/">
-              <a style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</a>
+              <a style={{ color: 'var(--accents-4)' }}>{NAME_LONG.toLowerCase()}</a>
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ function Navbar() {
           </div>
           <div className="icon subtitle">
             <p>{PHONE_NUMBER}</p>
-            <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </div>
         </div>
       </nav>
@@ -110,12 +110,12 @@ function Navbar() {
         }
 
         .links a:hover {
-          color: var(--accents-3);
+          color: var(--accents-4);
         }
 
         .links a.selected {
-          color: var(--accents-3);
-          text-shadow: 0px 0px 1px var(--accents-3);
+          color: var(--accents-4);
+          text-shadow: 0px 0px 1px var(--accents-4);
         }
 
         .links a:first-child {

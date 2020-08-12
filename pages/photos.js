@@ -3,7 +3,7 @@ import Photos from 'components/photos'
 
 export default function PhotosPage() {
   return (
-    <Page>
+    <Page title="Photos">
       <Photos />
     </Page>
   )
