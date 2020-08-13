@@ -2,7 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
-import { EMAIL, PHONE_NUMBER, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
+import { EMAIL, PHONE, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -74,7 +74,7 @@ function Navbar() {
             <Button href={REZTRIP_URL}>Book</Button>
           </div>
           <div className="icon subtitle">
-            <p>{PHONE_NUMBER}</p>
+            <p>{PHONE}</p>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </div>
         </div>
