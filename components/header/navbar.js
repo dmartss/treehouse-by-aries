@@ -73,7 +73,7 @@ function Navbar() {
           <div className="book">
             <Button href={REZTRIP_URL}>Book</Button>
           </div>
-          <div className="icon subtitle">
+          <div className="icon">
             <p>{PHONE}</p>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </div>
@@ -97,16 +97,14 @@ function Navbar() {
           z-index: 1;
         }
 
+        .links .hotel {
+          white-space: nowrap;
+        }
+
         .links a {
           text-decoration: none;
           transition: color 0.2s ease;
           flex: 1;
-        }
-
-        .links .hotel {
-          margin-right: -2rem;
-          overflow: hidden;
-          white-space: nowrap;
         }
 
         .links a:hover {
