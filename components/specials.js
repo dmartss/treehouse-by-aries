@@ -2,7 +2,7 @@ import Container from 'components/container'
 import SectionHeader from 'components/section-header'
 import SpecialsSection from 'components/specials-section'
 import Image from './image'
-import { PHONE_NUMBER } from 'lib/constants'
+import { PHONE } from 'lib/constants'
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
             arrivals through November 30, 2020 can be changed or cancelled without charge up to 24
             hours before the scheduled arrival date. However, please note that changes to
             reservations will be subject to availability and rate differences. We are always only a
-            phone call away at {PHONE_NUMBER}
+            phone call away at {PHONE}
           </p>
         </div>
         <SpecialsSection
