@@ -43,7 +43,7 @@ function Navbar() {
           </div>
 
           <Link href="/">
-            <a className="logo">
+            <a className="logo" title="Go to the homepage">
               <Logo />
             </a>
           </Link>
