@@ -14,8 +14,8 @@ export default function Home() {
           oversize={false}
           alt="Room 1"
           src="/showcase/back/1.jpg"
-          width={3000 / 4}
-          height={2000 / 4}
+          width={3000 / 3.25}
+          height={2000 / 3.25}
         />
         <SectionHeader id="service" title="Service" description={TEXT[1]} />
         <SectionHeader id="Where it's at" title="Where it's at" description={TEXT[2]} />
