@@ -10,10 +10,10 @@ export default function Home() {
         <SectionHeader id="about" title={`About ${NAME_SHORT}`} description={TEXT[0]} />
         <Image
           shadow
-          className="no-drag no-tap-highlight"
+          className="no-drag"
           oversize={false}
           alt="Room 1"
-          src="/images/back/1.jpg"
+          src="/showcase/back/1.jpg"
           width={3000 / 4}
           height={2000 / 4}
         />

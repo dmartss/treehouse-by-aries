@@ -74,10 +74,10 @@ body {
   color: var(--black);
 }
 
-.subtitle {
+.fs {
   color: var(--accents-1);
 }
-.mute {
+.fp {
   color: var(--accents-3);
 }
 

@@ -1,7 +1,16 @@
 import Button from 'components/button'
 import { REZTRIP_URL } from 'lib/constants'
+import Image from './image'
 
-export default function SpecialsSection({ description, reverse, children, special }) {
+export default function SpecialsSection({
+  description,
+  reverse,
+  special,
+  alt,
+  src,
+  width,
+  height
+}) {
   return (
     <div className="main">
       <style jsx>
@@ -33,10 +42,10 @@ export default function SpecialsSection({ description, reverse, children, specia
           }
         `}
       </style>
-      {children}
+      <Image className="no-drag" shadow alt={alt} src={src} width={width} height={height} />
       <div className="content">
-        <h2 className="mute fw4">{special}</h2>
-        <p className="f-reset subtitle fw4">{description}</p>
+        <h2 className="fp fw4">{special}</h2>
+        <p className="f-reset fs fw4">{description}</p>
         <Button invert href={REZTRIP_URL}>
           Book
         </Button>

@@ -1,4 +1,6 @@
-export default function Section({ description, reverse, children }) {
+import Image from './image'
+
+export default function Section({ description, reverse, alt, src, width, height }) {
   return (
     <div>
       <style jsx>
@@ -27,8 +29,8 @@ export default function Section({ description, reverse, children }) {
           }
         `}
       </style>
-      {children}
-      <p className="f-reset subtitle fw4">{description}</p>
+      <Image className="no-drag" shadow alt={alt} src={src} width={width} height={height} />
+      <p className="f-reset fs fw4">{description}</p>
     </div>
   )
 }
