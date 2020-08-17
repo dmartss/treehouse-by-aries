@@ -23,14 +23,14 @@ export default function Rooms() {
                   </div>
                   <h5 className="fs fw4">{description}</h5>
                   <div className="images">
-                    {images.map(({ src }) => (
+                    {images.map(({ src, alt }) => (
                       <Image
                         key={src}
                         className="no-drag"
                         margin={10}
                         shadow
-                        alt={src}
                         src={src}
+                        alt={alt}
                         layout="responsive"
                         width={imgWidth}
                         height={imgHeight}

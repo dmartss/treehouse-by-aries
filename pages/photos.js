@@ -3,9 +3,6 @@ import Image from 'components/image'
 import Page from 'components/page'
 import { images } from 'lib/rooms'
 
-const imgWidth = 300
-const imgHeight = 200
-
 export default function Photos() {
   return (
     <Page title="Photos">
@@ -18,10 +15,10 @@ export default function Photos() {
                 className="no-drag"
                 shadow
                 margin={20}
-                alt={alt}
                 src={src}
-                width={imgWidth}
-                height={imgHeight}
+                alt={alt}
+                width={300}
+                height={200}
                 layout="responsive"
               />
             ))}
