@@ -28,7 +28,9 @@ function Navbar() {
           </Link>
 
           <div className="book">
-            <Button href={REZTRIP_URL}>Book</Button>
+            <Button target="_blank" href={REZTRIP_URL}>
+              Book
+            </Button>
           </div>
         </div>
 
@@ -68,7 +70,9 @@ function Navbar() {
             </a>
           </Link>
           <div className="book">
-            <Button href={REZTRIP_URL}>Book</Button>
+            <Button target="_blank" href={REZTRIP_URL}>
+              Book
+            </Button>
           </div>
           <div className="icon">
             <p>{PHONE}</p>
