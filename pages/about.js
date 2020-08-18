@@ -7,7 +7,7 @@ import { NAME_SHORT, TEXT } from 'lib/constants'
 export default function About() {
   return (
     <Page title="About">
-      <Container role="main" wide dotBackground aria-labelledby="about">
+      <Container role="main" dotBackground aria-labelledby="about">
         <Container center padding>
           <SectionHeader id="about" title={`About ${NAME_SHORT}`} description={TEXT[0]} />
           <Image
