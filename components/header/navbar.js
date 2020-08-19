@@ -2,7 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
-import { EMAIL, PHONE, NAME_SHORT, NAME_LONG, REZTRIP_URL } from 'lib/constants'
+import { EMAIL, PHONE, NAME, REZTRIP_URL } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -16,10 +16,10 @@ function Navbar() {
       <nav className="f-reset">
         <div className="mobile-top">
           <Link href="/">
-            <a className="fs">{NAME_SHORT.toUpperCase()}</a>
+            <a className="fs">{NAME[0].toUpperCase()}</a>
           </Link>
           <Link href="/">
-            <a style={{ color: 'var(--accents-4)' }}>{NAME_LONG.toLowerCase()}</a>
+            <a style={{ color: 'var(--accents-4)' }}>{NAME[1].toLowerCase()}</a>
           </Link>
           <Link href="/">
             <a className="mobile-logo" title="Go to the homepage">
@@ -35,10 +35,10 @@ function Navbar() {
         <div className="links">
           <div className="hotel">
             <Link href="/">
-              <a className="fs">{NAME_SHORT.toUpperCase()}</a>
+              <a className="fs">{NAME[0].toUpperCase()}</a>
             </Link>
             <Link href="/">
-              <a style={{ color: 'var(--accents-4)' }}>{NAME_LONG.toLowerCase()}</a>
+              <a style={{ color: 'var(--accents-4)' }}>{NAME[1].toLowerCase()}</a>
             </Link>
           </div>
 
@@ -72,7 +72,7 @@ function Navbar() {
           </div>
           <div className="icon">
             <p>{PHONE}</p>
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a href={`mailto:${EMAIL}?subject=Hello`}>{EMAIL}</a>
           </div>
         </div>
       </nav>
