@@ -19,13 +19,13 @@ export default function SpecialsSection({
             position: relative;
             display: flex;
             flex-direction: ${reverse ? 'row-reverse' : 'row'};
-            margin-top: var(--gap-double);
+            margin: var(--gap) 0;
           }
           .content {
             margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
           }
           .content :global(a) {
             align-self: center;

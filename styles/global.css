@@ -74,16 +74,21 @@ body {
   color: var(--black);
 }
 
-.fs {
-  color: var(--accents-1);
-}
 .fp {
   color: var(--accents-3);
+}
+.fs {
+  color: var(--accents-1);
 }
 
 ::selection {
   background-color: var(--accents-1);
   color: var(--white);
+}
+.paragraph {
+  border-top: 1px solid var(--accents-1);
+  border-bottom: 1px solid var(--accents-1);
+  padding: var(--gap-double);
 }
 
 svg {

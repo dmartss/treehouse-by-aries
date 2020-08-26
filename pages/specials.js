@@ -1,8 +1,8 @@
-import Page from 'components/page'
-import Container from 'components/container'
-import SectionHeader from 'components/section-header'
+import { SPECIALS, DESCRIPTIONS, TEXT } from 'lib/constants'
 import SpecialsSection from 'components/specials-section'
-import { PHONE } from 'lib/constants'
+import SectionHeader from 'components/section-header'
+import Container from 'components/container'
+import Page from 'components/page'
 
 export default function Specials() {
   return (
@@ -15,26 +15,13 @@ export default function Specials() {
             description={`Attitude-Free Pricing & Packages`}
           />
           <div className="paragraph">
-            <p className="fs">
-              Transformed from an American motel classic to an uber-chic, boutique urban oasis, The
-              Vagabond Hotel Miami is bringing back stylish highly-personalized service to the
-              Biscayne Boulevard corridor! Throughout the year, you'll find unique Miami experiences
-              like Art Basel, Miami Boat and Auto Show, Miami Book Fair International, South Beach
-              Food and Wine Festival, and more. Go ahead and call dibs on one while you still can…
-            </p>
-            <p className="fs">
-              WE MAKE IT SUPER QUICK, EASY AND CONVENIENT. During these challenging times, we know
-              flexibility is key so don't worry we've got you covered! Reservations for future
-              arrivals through November 30, 2020 can be changed or cancelled without charge up to 24
-              hours before the scheduled arrival date. However, please note that changes to
-              reservations will be subject to availability and rate differences. We are always only
-              a phone call away at {PHONE}
-            </p>
+            <p className="fs">{TEXT[0]}</p>
+            <p className="fs">{TEXT[1]}</p>
+            <p className="fs">{TEXT[2]}</p>
           </div>
           <SpecialsSection
-            special="Advance Purchase - Non Refundable"
-            description="Last-minute travel is great, but why not plan ahead and take advantage of our Non - Refundable Advance Purchase Special.  Book at least 42 days in advance and Save 10% off your entire stay.  Black-out dates apply,  December 1 st - 8 th and December 27 th - January 1 st.
-          And it gets even better! This promotion can be combined with our Stay More and Save specials, allowing you to save up to 25% off eligible stays.  Promotion Includes: complimentary wifi, parking and 2 bottles of water daily."
+            special={SPECIALS[0]}
+            description={DESCRIPTIONS[0]}
             alt="Room QD 1"
             src="/showcase/rooms/qd/1.jpg"
             width={3000 / 6}
@@ -42,24 +29,22 @@ export default function Specials() {
           />
           <SpecialsSection
             reverse
-            special="Stay 6 Nights and Save 15%"
-            description="Last-minute travel is great, but why not plan ahead and take advantage of our Non - Refundable Advance Purchase Special.  Book at least 42 days in advance and Save 10% off your entire stay.  Black-out dates apply,  December 1 st - 8 th and December 27 th - January 1 st.
-          And it gets even better! This promotion can be combined with our Stay More and Save specials, allowing you to save up to 25% off eligible stays.  Promotion Includes: complimentary wifi, parking and 2 bottles of water daily"
+            special={SPECIALS[1]}
+            description={DESCRIPTIONS[1]}
             alt="Room QL 1"
             src="/showcase/rooms/ql/1.jpg"
             width={3000 / 6}
             height={2000 / 6}
           />
+          <SpecialsSection
+            special={SPECIALS[2]}
+            description={DESCRIPTIONS[2]}
+            alt="Room FR 1"
+            src="/showcase/rooms/fr/1.jpg"
+            width={3000 / 6}
+            height={2000 / 6}
+          />
         </Container>
-        <style jsx>
-          {`
-            .paragraph {
-              border-top: 1px solid var(--accents-3);
-              border-bottom: 1px solid var(--accents-3);
-              padding: var(--gap-double);
-            }
-          `}
-        </style>
       </Container>
     </Page>
   )
