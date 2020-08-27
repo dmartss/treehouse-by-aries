@@ -1,21 +1,16 @@
 import NextHead from 'next/head'
 import { NAME, PLATFORM_URL, defaultOgImage } from 'lib/constants'
 
-export default function Head({
-  title = NAME[0],
-  description = NAME[0] + ' ' + NAME[1],
-  image = defaultOgImage,
-  children
-}) {
+export default function Head({ title, description = NAME, image = defaultOgImage, children }) {
   return (
     <NextHead>
       {/* Title */}
-      <title>{title}</title>
+      <title>{`${NAME[0]}${title ? ` - ${title}` : ''}`}</title>
       <meta name="og:title" content={title} />
 
       {/* Description */}
-      <meta name="description" content={description} />
-      <meta name="og:description" content={description} />
+      <meta name="description" content={description.join(' ')} />
+      <meta name="og:description" content={description.join(' ')} />
 
       {/* Image */}
       <meta name="twitter:image" content={image} />
