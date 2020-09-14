@@ -15,7 +15,7 @@ const Banner = () => {
       <style jsx>{`
         .banner {
           width: 100%;
-          background: var(--black);
+          background-image: var(--gradient-1);
           color: var(--white);
           min-height: 75px;
           display: flex;

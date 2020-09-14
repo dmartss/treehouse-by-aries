@@ -31,9 +31,7 @@
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
 
-  /* Transitions */
-  --transition: 0.1s ease-in-out;
-  --transition-slow: 0.3s ease-in-out;
+  --gradient-1: linear-gradient(270deg, #111111, #333333, #333333, #111111);
 }
 
 html {
