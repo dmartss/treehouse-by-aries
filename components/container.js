@@ -1,22 +1,23 @@
 export default function Container({
-  center,
-  vCenter,
-  dark,
-  gray,
-  wide,
-  wideOnMobile,
-  small,
-  padding,
-  overflow,
-  minHeight,
-  dotBackground,
+  center = false,
+  vCenter = false,
+  dark = false,
+  gray = false,
+  wide = false,
+  wideOnMobile = false,
+  small = false,
+  padding = false,
+  overflow = false,
+  minHeight = null,
+  dotBackground = false,
+  mobileStyle = null,
+  divider = false,
   children,
-  mobileStyle,
-  divider,
   ...props
 }) {
   return (
     <div {...props}>
+      {/* prettier-ignore */}
       <style jsx>
         {`
       {

@@ -2,32 +2,16 @@ import { memo } from 'react'
 import cn from 'classnames'
 import Banner from './banner'
 import Nav from './navbar'
+import styles from './header.module.css'
 
 const Header = ({ sticky = true }) => {
   return (
     <>
       <Banner />
 
-      <header className={cn({ sticky })}>
+      <header className={cn(styles.header, { [styles.sticky]: sticky })}>
         <Nav />
       </header>
-
-      <style jsx>{`
-        header {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          z-index: 1000;
-          background: var(--accents-3);
-          border-bottom: 1px solid #eaeaea;
-        }
-        header.sticky {
-          position: sticky;
-          top: 0;
-        }
-      `}</style>
     </>
   )
 }

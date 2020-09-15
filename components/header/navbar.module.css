@@ -1,0 +1,127 @@
+.nav {
+  position: relative;
+  flex: 1;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.links .hotel {
+  white-space: nowrap;
+}
+
+.links a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  flex: 1;
+}
+
+.links a:hover {
+  color: var(--accents-4);
+}
+
+.links a.selected {
+  color: var(--accents-4);
+  text-shadow: 0px 0px 1px var(--accents-4);
+}
+
+.links a:first-child {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.nav .logo,
+.nav .icon,
+.nav .icon > :global(div.container) {
+  /* Remove additional space from SVG */
+  display: inline-flex;
+  justify-content: center;
+}
+
+.nav .icon > :global(div.container) {
+  overflow: visible;
+}
+
+.mobile-logo,
+.mobile-top {
+  display: none;
+}
+
+.nav .book :global(a) {
+  background-color: var(--accents-1);
+  color: var(--white);
+  border: 1px solid var(--accents-1);
+  padding: var(--gap-quarter) var(--gap);
+  margin: 0;
+}
+
+.nav .book :global(a:focus),
+.nav .book :global(a:hover) {
+  background-color: transparent;
+  color: var(--accents-1);
+}
+
+.nav .icon {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.5;
+  color: var(--accents-1);
+  margin: 0 0 var(--gap) var(--gap);
+}
+
+/* Mobile */
+
+@media (max-width: 960px) {
+  .links .logo {
+    padding-left: var(--gap);
+  }
+}
+
+@media (max-width: 720px) {
+  .mobile-logo {
+    display: block;
+  }
+
+  .nav {
+    height: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--gap) 0;
+  }
+
+  .nav .links .logo,
+  .nav .links .hotel,
+  .nav .links .book {
+    display: none;
+  }
+
+  .nav a,
+  .nav p {
+    font-size: 14px;
+  }
+
+  .mobile-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--gap-half);
+  }
+
+  .book {
+    margin-left: var(--gap-half);
+  }
+}

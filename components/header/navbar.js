@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
 import { EMAIL, PHONE, NAME, REZTRIP_URL } from 'lib/constants'
+import styles from './navbar.module.css'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -13,8 +14,8 @@ function Navbar() {
 
   return (
     <Container>
-      <nav className="f-reset">
-        <div className="mobile-top">
+      <nav className={cn(styles['nav'], 'f-reset')}>
+        <div className={styles['mobile-top']}>
           <Link href="/">
             <a className="fs">{NAME[0].toUpperCase()}</a>
           </Link>
@@ -22,18 +23,18 @@ function Navbar() {
             <a style={{ color: 'var(--accents-4)' }}>{NAME[1].toLowerCase()}</a>
           </Link>
           <Link href="/">
-            <a className="mobile-logo" title="Go to the homepage">
+            <a className={styles['mobile-logo']} title="Go to the homepage">
               <Logo />
             </a>
           </Link>
 
-          <div className="book">
+          <div className={styles['book']}>
             <Button href={REZTRIP_URL}>Book</Button>
           </div>
         </div>
 
-        <div className="links">
-          <div className="hotel">
+        <div className={styles['links']}>
+          <div className={styles['hotel']}>
             <Link href="/">
               <a className="fs">{NAME[0].toUpperCase()}</a>
             </Link>
@@ -43,168 +44,51 @@ function Navbar() {
           </div>
 
           <Link href="/">
-            <a className="logo" title="Go to the homepage">
+            <a className={styles['logo']} title="Go to the homepage">
               <Logo />
             </a>
           </Link>
           <Link href="/rooms">
-            <a className={cn('fs', { selected: route.startsWith('/rooms') })} title="Rooms">
+            <a
+              className={cn('fs', { [styles.selected]: route.startsWith('/rooms') })}
+              title="Rooms"
+            >
               Rooms
             </a>
           </Link>
           <Link href="/about">
-            <a className={cn('fs', { selected: route.startsWith('/about') })} title="About">
+            <a
+              className={cn('fs', { [styles.selected]: route.startsWith('/about') })}
+              title="About"
+            >
               About
             </a>
           </Link>
           <Link href="/photos">
-            <a className={cn('fs', { selected: route.startsWith('/photos') })} title="Photos">
+            <a
+              className={cn('fs', { [styles.selected]: route.startsWith('/photos') })}
+              title="Photos"
+            >
               Photos
             </a>
           </Link>
           <Link href="/specials">
-            <a className={cn('fs', { selected: route.startsWith('/specials') })} title="Specials">
+            <a
+              className={cn('fs', { [styles.selected]: route.startsWith('/specials') })}
+              title="Specials"
+            >
               Specials
             </a>
           </Link>
-          <div className="book">
+          <div className={styles['book']}>
             <Button href={REZTRIP_URL}>Book</Button>
           </div>
-          <div className="icon">
+          <div className={styles['icon']}>
             <p>{PHONE}</p>
             <a href={`mailto:${EMAIL}?subject=Hello`}>{EMAIL}</a>
           </div>
         </div>
       </nav>
-
-      <style jsx>{`
-        nav {
-          position: relative;
-          flex: 1;
-          height: var(--header-height);
-          display: flex;
-          align-items: center;
-        }
-
-        .links {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          z-index: 1;
-        }
-
-        .links .hotel {
-          white-space: nowrap;
-        }
-
-        .links a {
-          text-decoration: none;
-          transition: color 0.2s ease;
-          flex: 1;
-        }
-
-        .links a:hover {
-          color: var(--accents-4);
-        }
-
-        .links a.selected {
-          color: var(--accents-4);
-          text-shadow: 0px 0px 1px var(--accents-4);
-        }
-
-        .links a:first-child {
-          display: flex;
-          overflow: hidden;
-          white-space: nowrap;
-          margin: 0;
-        }
-
-        .logo,
-        .icon,
-        .icon > :global(div.container) {
-          /* Remove additional space from SVG */
-          display: inline-flex;
-          justify-content: center;
-        }
-
-        .icon > :global(div.container) {
-          overflow: visible;
-        }
-
-        .mobile-logo,
-        .mobile-top {
-          display: none;
-        }
-
-        .book :global(a) {
-          background-color: var(--accents-1);
-          color: var(--white);
-          border: 1px solid var(--accents-1);
-          padding: var(--gap-quarter) var(--gap);
-          margin: 0;
-        }
-        .book :global(a:focus),
-        .book :global(a:hover) {
-          background-color: transparent;
-          color: var(--accents-1);
-        }
-
-        .icon {
-          text-align: right;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          line-height: 0.5;
-          color: var(--accents-1);
-          margin: 0 0 var(--gap) var(--gap);
-        }
-
-        /* Mobile */
-
-        @media (max-width: 960px) {
-          .links .logo {
-            padding-left: var(--gap);
-          }
-        }
-
-        @media (max-width: 640px) {
-          .mobile-logo {
-            display: block;
-          }
-
-          nav {
-            height: unset;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: var(--gap) 0;
-          }
-
-          nav .links .logo,
-          nav .links .hotel,
-          nav .links .book {
-            display: none;
-          }
-
-          nav a,
-          nav p {
-            font-size: 12px;
-          }
-
-          .mobile-top {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: var(--gap-half);
-          }
-
-          .book {
-            margin-left: var(--gap-half);
-          }
-        }
-      `}</style>
     </Container>
   )
 }

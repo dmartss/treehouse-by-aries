@@ -1,6 +1,8 @@
 import Button from 'components/button'
 import { REZTRIP_URL } from 'lib/constants'
 import Image from './image'
+import cn from 'classnames'
+import styles from './specials-section.module.css'
 
 export default function SpecialsSection({
   description,
@@ -12,38 +14,9 @@ export default function SpecialsSection({
   height
 }) {
   return (
-    <div className="main">
-      <style jsx>
-        {`
-          .main {
-            position: relative;
-            display: flex;
-            flex-direction: ${reverse ? 'row-reverse' : 'row'};
-            margin: var(--gap) 0;
-          }
-          .content {
-            margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .content :global(a) {
-            align-self: center;
-          }
-          @media screen and (max-width: 960px) {
-            .main {
-              flex-direction: column;
-              text-align: center;
-            }
-            .content {
-              padding: 0 var(--gap);
-              margin: 0;
-            }
-          }
-        `}
-      </style>
+    <div className={cn(styles['main'], { [styles.reverse]: reverse })}>
       <Image className="no-drag" shadow alt={alt} src={src} width={width} height={height} />
-      <div className="content">
+      <div className={styles['content']}>
         <h2 className="fp fw4">{special}</h2>
         <p className="f-reset fs fw4">{description}</p>
         <Button invert href={REZTRIP_URL}>

@@ -7,15 +7,15 @@ export default function Footer() {
   return (
     <Container wide dark center>
       <Container>
-        <footer className={styles.root}>
-          <nav className={styles.content}>
+        <footer className={styles['root']}>
+          <nav className={styles['content']}>
             <div className="tl">
               <p>{PHONE}</p>
               <a href={`mailto:${EMAIL}?subject=Hello`}>{EMAIL}</a>
             </div>
 
-            <div className={styles.center}>
-              <span className={styles.social}>
+            <div className={styles['center']}>
+              <span className={styles['social']}>
                 <a href={FACEBOOK} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook />
                 </a>
@@ -32,7 +32,7 @@ export default function Footer() {
                 </a>
               </span>
 
-              <p className={styles.mobile}>
+              <p className={styles['mobile']}>
                 {ADDRESS[0]} {ADDRESS[1]}
               </p>
               <p>
