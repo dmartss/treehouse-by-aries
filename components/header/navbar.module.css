@@ -21,7 +21,6 @@
 .links a {
   text-decoration: none;
   transition: color 0.2s ease;
-  flex: 1;
 }
 
 .links a:hover {
@@ -110,7 +109,7 @@
 
   .nav a,
   .nav p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .mobile-top {
