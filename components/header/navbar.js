@@ -80,6 +80,15 @@ function Navbar() {
               Specials
             </a>
           </Link>
+          <a
+            className="fs"
+            href="https://ariesliving.com/terms-and-conditions"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Terms"
+          >
+            Terms
+          </a>
           <div className={styles['book']}>
             <Button href={REZTRIP_URL}>Book</Button>
           </div>
