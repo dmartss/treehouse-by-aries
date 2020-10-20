@@ -82,6 +82,9 @@ body {
 .fs {
   color: var(--accents-1);
 }
+.ft {
+  color: var(--accents-4);
+}
 
 ::selection {
   background-color: var(--accents-1);

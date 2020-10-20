@@ -14,7 +14,7 @@ export default function SpecialsSection({
   height
 }) {
   return (
-    <div className={cn(styles['main'], { [styles.reverse]: reverse })}>
+    <div className={cn(styles.main, { [styles.reverse]: reverse })}>
       <Image className="no-drag" shadow alt={alt} src={src} width={width} height={height} />
       <div className={styles['content']}>
         <h2 className="fp fw4">{special}</h2>

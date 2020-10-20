@@ -18,21 +18,7 @@
   white-space: nowrap;
 }
 
-.links a {
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.links a:hover {
-  color: var(--accents-4);
-}
-
-.links a.selected {
-  color: var(--accents-4);
-  text-shadow: 0px 0px 1px var(--accents-4);
-}
-
-.links a:first-child {
+.links :global(a:first-child) {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
@@ -109,7 +95,7 @@
 
   .nav a,
   .nav p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .mobile-top {

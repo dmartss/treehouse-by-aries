@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server'
 
 const Icon = renderToString(<EmailClosedIcon height="15" width="15" fill="currentColor" />)
 
-export default function EmailForm({ flex }) {
+export default function EmailForm({ banner }) {
   const token = process.env.NEXT_PUBLIC_TOKEN
   return (
     <div
@@ -12,23 +12,23 @@ export default function EmailForm({ flex }) {
           <script type="text/javascript" src="//contact-api.inguest.com/bundles/revinatecontactapi/js/revinate-form.js?v=1"></script>
           <form class="form" id="revinate_contact_api_form" token="${token}"
                 onsubmit="revFormOnSubmit(); event.preventDefault();">
-            <div class=${flex ? 'flex' : ''}>
+            <div class=${banner ? 'banner' : 'div'}>
               <div>
                 <label class="label">
                   <span class="icon">
                   ${Icon}
                 </span>
                 <input placeholder="you@domain.com" class=${
-                  flex ? 'flex' : ''
+                  banner ? 'banner' : ''
                 } type="email" name="email" required/>
               </div>
               </label>
               <div class="button">
-                <button class=${flex ? 'flex' : ''} type="submit">Subscribe</button>
+                <button class=${banner ? 'banner' : ''} type="submit">Subscribe</button>
               </div>
             </div>
 
-          <style scoped>
+            <style scoped>
           form.form {
             display: inline-block;
             position: relative;
@@ -45,8 +45,8 @@ export default function EmailForm({ flex }) {
           }
 
           form.form span.icon {
-            margin: 0 14px;
             display: inline-flex;
+            margin: 0 14px;
           }
 
           form.form div {
@@ -54,10 +54,9 @@ export default function EmailForm({ flex }) {
             max-width: 100%;
             text-align: center;
             margin: auto;
-            transition: border-bottom-color 100ms ease-in, color 100ms ease-in;
           }
 
-          form.form div.flex {
+          form.form div.banner {
             display: flex;
             flex-direction: row;
             width: 490px;
@@ -78,37 +77,34 @@ export default function EmailForm({ flex }) {
             line-height: 27px;
             width: 100%;
             box-shadow: none;
-            color: var(--black);
-            background-color: transparent;
+            color: var(--white);
             border: none;
             border-radius: 0;
-            box-sizing: border-box;
           }
 
-          form.form input.flex {
-            color: var(--white);
-          }
-
-          input::placeholder {
-            color: #999;
-            transition: color 100ms ease-in;
+          form.form input.banner {
+            color: #fff;
           }
 
           form.form input::placeholder {
             color: #999;
+            transition: color 200ms ease-in-out;
           }
 
-          form.form input:focus {
+          form.form input:focus::placeholder {
+            color: var(--white);
+          }
+
+          form.form label:focus-within,
+          form.form label:hover {
+            transition: border-color 200ms ease-in-out;
+            border-color: var(--accents-3);
+          }
+
+          form.form label:focus-within input {
             outline: none;
             background: none;
-            transition: border-color 100ms ease-in;
-            border-color: var(--accents-8);
           }
-
-          form.form input.flex:focus {
-            border-color: var(--white);;
-          }
-
           form.form input:disabled {
             color: #666;
           }
@@ -128,8 +124,8 @@ export default function EmailForm({ flex }) {
             margin: calc(-1 * var(--gap-quarter)) calc(-1 * var(--gap-half));
             border-radius: var(--radius);
             color: var(--accents-3);
-            background-color: var(--black);
-            border: 1px solid var(--black);
+            background-color: var(--white);
+            border: 1px solid var(--white);
             font-size: inherit;
             line-height: inherit;
             transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
@@ -137,12 +133,13 @@ export default function EmailForm({ flex }) {
             height: 45px;
             margin: 10px 0;
             width: 100%;
-            color: var(--white);
+            color: var(--black);
           }
 
-          form.form button.flex {
+          form.form button.banner {
             background-color: var(--accents-3);
-            color: var(--black);
+            color: #fff;
+            border: 1px solid var(--accents-3);
             width: 175px;
           }
 
@@ -150,23 +147,26 @@ export default function EmailForm({ flex }) {
           form.form button:hover {
             background-color: transparent;
             outline: none;
-            border-color: var(--black);
-            color: var(--black);
+            border-color: var(--white);
+            color: var(--white);
           }
 
-          form.form button.flex:focus,
-          form.form button.flex:hover {
+          form.form button.banner:focus,
+          form.form button.banner:hover {
             border-color: var(--accents-3);
             color: var(--accents-3);
           }
 
           @media (max-width: 640px) {
-            form.form div.flex {
+            form.form div.banner {
               display: flex;
               flex-direction: column;
               width: 80vw;
               align-items: center;
               justify-content: space-between;
+            }
+            form.form button.banner {
+              width: 100%;
             }
           }
           </style>
