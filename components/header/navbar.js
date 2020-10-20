@@ -82,7 +82,7 @@ function Navbar() {
           </Link>
           <a
             className="fs"
-            href="https://ariesliving.com/terms-and-conditions?utm_source=treehouse&utm_medium=homepage-header&utm_campaign=treehouse"
+            href="https://ariesliving.com/terms-and-conditions/treehouse"
             target="_blank"
             rel="noopener noreferrer"
             title="Terms"
