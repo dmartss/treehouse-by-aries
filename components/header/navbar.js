@@ -57,8 +57,6 @@ function Navbar() {
             external
             className="fs"
             href="https://ariesliving.com/terms-and-conditions/treehouse"
-            target="_blank"
-            rel="noopener noreferrer"
             title="Terms"
           >
             Terms

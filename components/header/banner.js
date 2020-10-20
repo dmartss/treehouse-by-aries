@@ -2,7 +2,7 @@ import EmailForm from '../email-form'
 import cn from 'classnames'
 import styles from './banner.module.css'
 
-const Banner = () => {
+export default function Banner() {
   return (
     <div className={styles.banner}>
       <div className={styles.inner}>
@@ -16,5 +16,3 @@ const Banner = () => {
     </div>
   )
 }
-
-export default Banner
