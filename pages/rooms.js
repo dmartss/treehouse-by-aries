@@ -1,10 +1,7 @@
-import Page from 'components/page'
 import Container from 'components/container'
+import Image from 'next/image'
+import Page from 'components/page'
 import rooms from 'lib/rooms'
-import Image from 'components/image'
-
-const imgWidth = 300
-const imgHeight = 200
 
 export default function Rooms() {
   return (
@@ -26,14 +23,11 @@ export default function Rooms() {
                     {images.map(({ src, alt }) => (
                       <Image
                         key={src}
-                        className="no-drag"
-                        margin={10}
-                        shadow
+                        className="image shadow radius"
                         src={src}
                         alt={alt}
-                        layout="responsive"
-                        width={imgWidth}
-                        height={imgHeight}
+                        width={300}
+                        height={200}
                       />
                     ))}
                   </div>
@@ -54,14 +48,10 @@ export default function Rooms() {
                       flex: 1;
                     }
                     .images {
-                      display: flex;
-                      justify-content: space-around;
-                      align-items: center;
-                      flex-wrap: wrap;
-                    }
-
-                    .images > :global(figure) {
-                      flex: 1;
+                      display: grid;
+                      grid-template-columns: repeat(3, 1fr);
+                      grid-row-gap: 20px;
+                      grid-column-gap: 10px;
                     }
                   `}</style>
                 </div>

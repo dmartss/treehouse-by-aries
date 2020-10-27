@@ -1,7 +1,7 @@
 .main {
   position: relative;
   display: flex;
-  margin: var(--gap) 0;
+  margin: var(--gap-triple) 0;
   flex-direction: row;
 }
 .main.reverse {

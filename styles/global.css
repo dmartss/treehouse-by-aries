@@ -86,6 +86,14 @@ body {
   color: var(--accents-4);
 }
 
+.image.radius {
+  border-radius: var(--radius);
+}
+
+.image.shadow {
+  box-shadow: var(--shadow-hover);
+}
+
 ::selection {
   background-color: var(--accents-1);
   color: var(--white);
