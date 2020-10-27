@@ -6,7 +6,7 @@ import cn from 'classnames'
 
 import styles from './link.module.css'
 
-const Link = ({ external, href, as, passHref, children, className, ...props }) => {
+const Link = ({ external, href, passHref, children, className, ...props }) => {
   const { route } = useRouter()
 
   const c = cn(className, styles.reset, {
@@ -23,12 +23,7 @@ const Link = ({ external, href, as, passHref, children, className, ...props }) =
 
   return (
     <>
-      <NextLink
-        href={href}
-        as={as}
-        prefetch={canPrefetch(href) ? undefined : false}
-        passHref={passHref}
-      >
+      <NextLink href={href} prefetch={canPrefetch(href) ? undefined : false} passHref={passHref}>
         {passHref ? (
           children
         ) : (
