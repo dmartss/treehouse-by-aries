@@ -13,15 +13,17 @@
 .main.reverse {
   flex-direction: row-reverse;
 }
-.main.reverse .content {
-  margin: 0 var(--gap-triple) 0 0;
-}
-.content {
+
+.main .content {
   margin: 0 0 0 var(--gap-triple);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.main.reverse .content {
+  margin: 0 var(--gap-triple) 0 0;
+}
+
 .content :global(a) {
   align-self: center;
 }
@@ -32,8 +34,9 @@
     flex-direction: column;
     text-align: center;
   }
-  .content {
+  .main .content,
+  .main.reverse .content {
     padding: var(--gap-double) var(--gap);
-    margin: auto;
+    margin: 0;
   }
 }
