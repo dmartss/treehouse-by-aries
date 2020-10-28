@@ -1,0 +1,18 @@
+{
+  "title": "Treehouse Studio Hotel",
+  "titleTemplate": "Treehouse - %s",
+  "description": "Treehouse Studio Hotel by Aries Living",
+  "canonical": "https://treehousebyaries.com",
+  "openGraph": {
+    "type": "website",
+    "locale": "en_IE",
+    "url": "https://treehousebyaries.com",
+    "site_name": "Villa Paradiso",
+    "description": "Treehouse Studio Hotel"
+  },
+  "twitter": {
+    "handle": "@aries_living",
+    "site": "@aries_living",
+    "cardType": "summary_large_image"
+  }
+}

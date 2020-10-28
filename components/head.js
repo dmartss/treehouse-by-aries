@@ -1,50 +1,44 @@
 import NextHead from 'next/head'
-import { NAME, PLATFORM_URL, defaultOgImage } from 'lib/constants'
+import { DefaultSeo } from 'next-seo'
+import config from 'seo.json'
+import { defaultOgImage } from 'lib/constants'
 
-export default function Head({ title, description = NAME, image = defaultOgImage, children }) {
+export default function Head({ title, children }) {
   return (
-    <NextHead>
-      {/* Title */}
-      <title>{`${NAME[0]}${title ? ` - ${title}` : ''}`}</title>
-      <meta name="og:title" content={title} />
-
-      {/* Description */}
-      <meta name="description" content={description.join(' ')} />
-      <meta name="og:description" content={description.join(' ')} />
-
-      {/* Image */}
-      <meta name="twitter:image" content={image} />
-      <meta name="og:image" content={image} />
-
-      {/* URL */}
-      <meta name="og:url" content={PLATFORM_URL} />
-
-      {/* General */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@aries_living" />
-      <meta name="apple-mobile-web-app-title" content={NAME[0]} />
-      <meta name="author" content="Aries Living" />
-
-      {/* Favicons */}
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
-      <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
-
-      <link
-        rel="preload"
-        href="https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin="anonymous"
+    <>
+      <DefaultSeo
+        {...config}
+        title={title}
+        openGraph={{
+          images: [{ url: defaultOgImage }]
+        }}
       />
+      <NextHead>
+        {/* General */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="apple-mobile-web-app-title" content="Treehouse" />
+        <meta name="author" content="Aries Living" />
 
-      {children}
-    </NextHead>
+        {/* Favicons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+          rel="preload"
+          href="https://assets.vercel.com/raw/upload/v1587415301/fonts/2/inter-var-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {children}
+      </NextHead>
+    </>
   )
 }
