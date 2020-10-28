@@ -30,6 +30,9 @@ function Navbar() {
         </div>
 
         <div className={styles.links}>
+          <Link href="/" className={styles.logo} title="Go to the homepage">
+            <Logo />
+          </Link>
           <div className={styles.hotel}>
             <Link href="/" className="fs">
               {NAME[0].toUpperCase()}
@@ -39,9 +42,6 @@ function Navbar() {
             </Link>
           </div>
 
-          <Link href="/" className={styles.logo} title="Go to the homepage">
-            <Logo />
-          </Link>
           <Link href="/rooms" className="fs" title="Rooms">
             Rooms
           </Link>

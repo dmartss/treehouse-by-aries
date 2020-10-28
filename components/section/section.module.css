@@ -1,3 +1,7 @@
+.section-header {
+  margin: var(--gap) 0 var(--gap);
+}
+
 .main {
   position: relative;
   display: flex;

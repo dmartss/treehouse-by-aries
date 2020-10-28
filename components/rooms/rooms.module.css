@@ -1,5 +1,7 @@
 .room {
   padding-bottom: var(--gap-double);
+  display: flex;
+  flex-direction: column;
 }
 .room:not(:first-of-type) {
   border-top: 1px solid var(--accents-3);

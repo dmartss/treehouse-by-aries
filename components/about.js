@@ -1,4 +1,4 @@
-import SectionHeader from 'components/section-header'
+import SectionHeader from 'components/section/section-header'
 import { NAME, TEXT } from 'lib/constants'
 import Image from 'next/image'
 
@@ -9,7 +9,7 @@ export default function About() {
       <Image
         className="image shadow radius"
         alt="Room 1"
-        src="/showcase/back/1.jpg"
+        src="/showcase/about.jpg"
         width={1500}
         height={1000}
       />

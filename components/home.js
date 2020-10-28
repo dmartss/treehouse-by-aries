@@ -1,6 +1,6 @@
-import SectionHeader from 'components/section-header'
-import { NAME, TEXT } from 'lib/constants'
+import SectionHeader from 'components/section/section-header'
 import Section from 'components/section'
+import { NAME, TEXT } from 'lib/constants'
 import Image from 'next/image'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Image
         className="image shadow radius"
         alt="Room 1"
-        src="/showcase/rooms/ql/1.jpg"
+        src="/showcase/home-1.jpg"
         width={3000}
         height={2000}
       />
@@ -17,7 +17,7 @@ export default function Home() {
       <Section
         description={TEXT[1]}
         alt="Room 2"
-        src="/showcase/front/1.jpg"
+        src="/showcase/home-2.jpg"
         width={2000}
         height={1333}
       />
@@ -25,7 +25,7 @@ export default function Home() {
         reverse
         description={TEXT[2]}
         alt="Room 3"
-        src="/showcase/back/1.jpg"
+        src="/showcase/about.jpg"
         width={2000}
         height={1333}
       />

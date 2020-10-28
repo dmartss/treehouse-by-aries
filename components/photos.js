@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { images } from 'lib/rooms'
+import images from 'lib/images'
 import styles from 'components/rooms/rooms.module.css'
 
 export default function Photo() {
