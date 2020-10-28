@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  margin: 2rem 0;
+  margin: var(--gap-double) 0;
 }
 
 .main h2 {
