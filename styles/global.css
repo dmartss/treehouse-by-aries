@@ -21,8 +21,11 @@
   --accents-6: #888888;
   --accents-7: #666666;
   --accents-8: #333;
+
+  --light-gray: #f1f1f1;
   --white: #ffffff;
   --black: #000000;
+
   --header-border-bottom: 1px solid #eaeaea;
 
   /* Typography */
@@ -97,11 +100,6 @@ body {
 ::selection {
   background-color: var(--accents-1);
   color: var(--white);
-}
-.paragraph {
-  border-top: 1px solid var(--accents-3);
-  border-bottom: 1px solid var(--accents-3);
-  padding: var(--gap-double);
 }
 
 svg {

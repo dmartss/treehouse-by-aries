@@ -2,7 +2,7 @@ import Button from 'components/button'
 import { REZTRIP_URL } from 'lib/constants'
 import Image from 'next/image'
 import cn from 'classnames'
-import styles from './specials-section.module.css'
+import styles from './specials.module.css'
 
 export default function SpecialsSection({ description, reverse, special, alt, src }) {
   return (

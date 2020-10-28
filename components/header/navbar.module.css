@@ -10,31 +10,13 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1;
 }
 
 .links .hotel {
-  white-space: nowrap;
-}
-
-.links :global(a:first-child) {
   display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0;
-}
-
-.nav .logo,
-.nav .icon,
-.nav .icon > :global(div.container) {
-  /* Remove additional space from SVG */
-  display: inline-flex;
-  justify-content: center;
-}
-
-.nav .icon > :global(div.container) {
-  overflow: visible;
+  flex-direction: column;
 }
 
 .mobile-logo,
@@ -56,35 +38,32 @@
   color: var(--accents-1);
 }
 
-.nav .icon {
+.nav .text-right {
   text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   line-height: 0.5;
-  color: var(--accents-1);
-  margin: 0 0 var(--gap) var(--gap);
+  margin-bottom: var(--gap);
 }
-
-/* Mobile */
 
 @media (max-width: 960px) {
   .links .logo {
     padding-left: var(--gap);
   }
+
+  .nav a,
+  .nav p {
+    font-size: 13px;
+  }
 }
 
-@media (max-width: 720px) {
-  .mobile-logo {
-    display: block;
-  }
-
+@media (max-width: 640px) {
   .nav {
     height: unset;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: var(--gap) 0;
+  }
+
+  .mobile-logo {
+    display: block;
   }
 
   .nav .links .logo,
@@ -95,18 +74,28 @@
 
   .nav a,
   .nav p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .mobile-top {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: var(--gap-half);
   }
 
-  .book {
-    margin-left: var(--gap-half);
+  .mobile-top > {
+    flex: 1;
+  }
+
+  .hotel-name {
+    display: flex;
+    flex-direction: column;
+    margin-right: var(--gap-half);
+  }
+
+  .nav .text-right {
+    display: none;
   }
 }

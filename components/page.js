@@ -2,13 +2,13 @@ import Head from './head'
 import Header from './header'
 import Footer from './footer'
 
-export default function Page({ title, sticky, description, image, children }) {
+export default function Page({ title, sticky, children }) {
   return (
-    <>
-      <Head title={title} description={description} image={image} />
+    <div>
+      <Head title={title} />
       <Header sticky={sticky} />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
