@@ -3,11 +3,9 @@
 }
 
 .main {
-  position: relative;
   display: flex;
-  justify-content: space-between;
   text-align: right;
-  flex-direction: row;
+  padding: var(--gap);
 }
 
 .main.reverse {
@@ -33,7 +31,12 @@
   }
   .main p,
   .main.reverse p {
-    padding: 0 var(--gap);
+    padding: var(--gap) 0;
+    margin: 0;
+    line-height: unset;
+  }
+
+  .section-header {
     margin: 0;
   }
 }

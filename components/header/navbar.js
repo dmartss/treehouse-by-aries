@@ -15,7 +15,7 @@ function Navbar() {
           <Link href="/" className={styles['mobile-logo']} title="Go to the homepage">
             <Logo />
           </Link>
-          <div className={styles['hotel-name']}>
+          <div className={styles.hotel}>
             <Link href="/" className="fs">
               {NAME[0].toUpperCase()}
             </Link>
