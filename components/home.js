@@ -12,6 +12,7 @@ export default function Home() {
         src="/showcase/home-1.jpg"
         width={2000}
         height={1333}
+        priority
       />
       <SectionHeader id="welcome" title={`Welcome to ${NAME[0]}`} description={TEXT[0]} />
       <Section
