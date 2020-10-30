@@ -1,8 +1,9 @@
+import fs from 'fs'
+import path from 'path'
+import { matches } from 'lib/constants'
 import Page from 'components/page'
 import Container from 'components/container'
 import Rooms from 'components/rooms'
-import fs from 'fs'
-import path from 'path'
 
 export default function RoomsPage({ images }) {
   return (
@@ -17,7 +18,6 @@ export default function RoomsPage({ images }) {
 }
 
 export const getStaticProps = () => {
-  const matches = ['fr -', 'ql -', 'qd -']
   const images = fs
     .readdirSync('./public/showcase-thumbnails/')
     .filter(file => path.extname(file) === '.jpg')
