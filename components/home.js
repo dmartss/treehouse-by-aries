@@ -16,7 +16,7 @@ export default function Home() {
       />
       <SectionHeader id="welcome" title={`Welcome to ${NAME[0]}`} description={TEXT[0]} />
       <Section description={TEXT[1]} alt="Room 2" src="/showcase/home-2.jpg" />
-      <Section reverse description={TEXT[2]} alt="Room 3" src="/showcase/about.jpg" />
+      <Section description={TEXT[2]} alt="Room 3" src="/showcase/about.jpg" reverse />
     </>
   )
 }

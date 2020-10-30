@@ -2,6 +2,10 @@
   margin: var(--gap) 0 var(--gap);
 }
 
+.section-header.home {
+  margin: var(--gap-double) 0 var(--gap);
+}
+
 .main {
   display: flex;
   text-align: right;
