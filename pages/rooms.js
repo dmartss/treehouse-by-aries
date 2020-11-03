@@ -21,12 +21,7 @@ export const getStaticProps = () => {
   const images = fs
     .readdirSync('./public/showcase-thumbnails/')
     .filter(file => path.extname(file) === '.jpg')
-    .reduce((prev, curr) => {
-      matches.forEach(match => {
-        if (curr.includes(match)) prev.push(curr)
-      })
-      return prev
-    }, [])
+    .filter(image => matches.includes(image.split('-')[0]))
 
   return {
     props: { images }
