@@ -4,16 +4,14 @@ import Banner from './banner'
 import Nav from './navbar'
 import styles from './header.module.css'
 
-const Header = ({ sticky = true }) => {
-  return (
-    <>
-      <Banner />
+const Header = () => (
+  <>
+    <Banner />
 
-      <header className={cn(styles.header, { [styles.sticky]: sticky })}>
-        <Nav />
-      </header>
-    </>
-  )
-}
+    <header className={cn(styles.header, styles.sticky)}>
+      <Nav />
+    </header>
+  </>
+)
 
 export default memo(Header)

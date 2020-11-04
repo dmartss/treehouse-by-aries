@@ -3,22 +3,22 @@ import cn from 'classnames'
 import { memo } from 'react'
 import styles from './button.module.css'
 
-export default memo(function Button({ children, invert, outline, href, as, className, ...props }) {
-  const cachedClassNames = cn(className, styles.btn, 'fw4 no-drag', {
-    [styles.outline]: outline,
-    [styles.invert]: invert
-  })
+function Button({ children, invert, subscribe, outline, href, as, className, ...props }) {
+  const rootClassName = cn(
+    styles.root,
+    'fw4 no-drag',
+    {
+      [styles.outline]: outline,
+      [styles.invert]: invert,
+      [styles.subscribe]: subscribe
+    },
+    className
+  )
 
   if (href) {
     const isExternal = href && href.startsWith('http')
     const a = (
-      <a
-        className={cachedClassNames}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...props}
-      >
+      <a className={rootClassName} href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
       </a>
     )
@@ -33,8 +33,11 @@ export default memo(function Button({ children, invert, outline, href, as, class
   }
 
   return (
-    <button type="button" className={cachedClassNames} {...props}>
+    <button type="button" className={rootClassName} {...props}>
       <span>{children}</span>
     </button>
   )
-})
+}
+
+Button.displayName = 'Button'
+export default memo(Button)
