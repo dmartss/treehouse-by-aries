@@ -9,6 +9,6 @@
 
 Located in the heart of the hip and historic MiMo District of Miami, Eivissa is the perfect place for a unique Miami getaway. With fresh, spacious rooms, and a fully digital experience, you can book with confidence knowing Eivissa has you covered.
 
-Eivissa Hotel Miami is proudly an apartment style boutique hotel offering a fully contactless stay with self check-in and 24/7 virtual guest support. Our team is available through talk, text, or email for whatever you may need, whenever you may need it. Any service requests will be taken care of at a safe distance and with ease.
+Eivissa is proudly an apartment style boutique hotel offering a fully contactless stay with self check-in and 24/7 virtual guest support. Our team is available through talk, text, or email for whatever you may need, whenever you may need it. Any service requests will be taken care of at a safe distance and with ease.
 
 Dotted with mid-century Miami-Modern architectural gems, Miami’s MiMo district is the place to get your fix of history, culture, and authentic new-age dining. Blocks away from Miami’s popular Wynwood and Design District your really can have it all at Eivissa.
