@@ -20,7 +20,7 @@ export default function Page({ title, children }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
-        <meta name="apple-mobile-web-app-title" content="Eivissa" />
+        <meta name="apple-mobile-web-app-title" content="Treehouse" />
         <meta name="author" content="Aries Living" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

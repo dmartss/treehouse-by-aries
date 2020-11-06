@@ -1,7 +1,7 @@
 {
-  "name": "Eivissa",
-  "short_name": "Eivissa",
-  "description": "Eivissa by Aries Living",
+  "name": "Treehouse Studio Hotel",
+  "short_name": "Treehouse",
+  "description": "Treehouse Studio Hotel by Aries Living",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
