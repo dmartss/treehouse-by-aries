@@ -57,7 +57,7 @@ function Navbar() {
           <Link
             external
             className="fs"
-            href="https://ariesliving.com/terms-and-conditions/treehouse"
+            href="https://ariesliving.com/terms-and-conditions/eivissa"
             title="Terms"
           >
             Terms

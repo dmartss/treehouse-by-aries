@@ -1,14 +1,13 @@
 {
-  "title": "Treehouse Studio Hotel",
-  "titleTemplate": "Treehouse - %s",
-  "description": "Treehouse Studio Hotel by Aries Living",
-  "canonical": "https://treehousebyaries.com",
+  "title": "Eivissa",
+  "titleTemplate": "Eivissa - %s",
+  "description": "Eivissa by Aries Living",
   "openGraph": {
     "type": "website",
     "locale": "en_IE",
     "url": "https://treehousebyaries.com",
-    "site_name": "Villa Paradiso",
-    "description": "Treehouse Studio Hotel"
+    "site_name": "Eivissa",
+    "description": "Eivissa by Aries Living"
   },
   "twitter": {
     "handle": "@aries_living",
